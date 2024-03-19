@@ -1,0 +1,31 @@
+package views
+
+import (
+	"net/http"
+	"webapp/internal/components"
+)
+
+const grid = "grid place-items-center h-screen gap-0"
+
+var start = 5
+
+templ Index(name string, r *http.Request) {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dracula">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>HTMX❤️Alpine</title>
+			<script defer src="webapp/js/alpine.js"></script>
+			<script defer src="webapp/js/htmx.js"></script>
+			<link rel="stylesheet" type="text/css" href="webapp/css/style.css"/>
+		</head>
+		<body>
+			@components.Header()
+			<div class={ grid } style="grid-template-rows: minmax(0, 1fr) minmax(0, 3fr) minmax(0, 1fr);">
+				<h1 class="animate-wobble animate-infinite animate-slower">Hello { name } you used the { r.Method } method to make the request</h1>
+				@components.Counter()
+			</div>
+		</body>
+	</html>
+}

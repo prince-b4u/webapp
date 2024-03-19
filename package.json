@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "alpinejs": "^3.13.3",
+    "daisyui": "latest",
+    "htmx.org": "^1.9.9"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.164",
+    "@iconify/tailwind": "^0.1.4",
+    "@tailwindcss/typography": "^0.5.10",
+    "animated-tailwindcss": "^4.0.0"
+  }
+}

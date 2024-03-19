@@ -1,0 +1,10 @@
+package components
+
+templ Counter() {
+	<div class="grid place-items-center" x-data="{count: 0}">
+		<span class="text-xl" x-text="count">0</span>
+		<button class="btn btn-accent btn-outline" x-on:click="count++">
+			<span class="icon-[ph--plus-fill] text-2xl"></span>
+		</button>
+	</div>
+}
