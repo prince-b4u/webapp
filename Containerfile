@@ -1,5 +1,5 @@
 # Use a minimal base image
-FROM docker.io/golang:1.22.0  AS builder
+FROM docker.io/golang:1.22.1  AS builder
 
 ENV CGO_ENABLED=0
 ENV GOOS=linux

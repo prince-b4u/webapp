@@ -7,7 +7,7 @@ test:
 			go test ./...
 
 image-build:
-			podman build -t webapp:$(VER) -f Containerfile .
+			podman build -t webapp:$(VER) -f ./Containerfile .
 
 ver:
 	@echo $(VER)
